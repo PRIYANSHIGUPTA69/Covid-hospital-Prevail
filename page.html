@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main_container">
+        <h1>COVID19 Dashboard</h1>
+    </div>
+    <div class="hospital_bed">
+        <div class="heading">
+            <h2>Covid19 Beds</h2>
+        </div>
+        <div class="hospital_beds">
+            <div class="totalBed bed">
+                <p class="totalBeds"></p>
+            </div>
+            <div class="occupiedBed bed">
+                <p class="occupiedBeds"></p>
+            </div>
+            <div class="vaccentBed bed">
+                <p class="vaccentBeds"></p>
+            </div>
+            <div class="totalICUBed bed">
+                <p class="totalICUBeds"></p>
+            </div>
+            <div class="occupiedICUBed bed">
+                <p class="occupiedICUBeds"></p>
+            </div>
+            <div class="vacantICUBed bed">
+                <p class="vacantICUBeds"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="nearby_hospital">
+        <div class="heading2">
+            <h2>Nearby Hospital</h2>
+        </div>
+        <div class="nearby_hospital_detail">
+            <div class="hospitalName nearby"></div>
+            <div class="availableBeds nearby"></div>
+            <div class="OxygenLeftFor nearby"></div>
+            <div class="distance nearby"></div>
+        </div>
+    </div>
+    <script>
+        fetch("data.json")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.hospitalData)  //vacantICUBeds
+                document.querySelector(".totalBeds").innerText = `Total Beds ${data.hospitalData[0].totalBed}`
+                document.querySelector(".occupiedBeds").innerText = `Occupied Beds ${data.hospitalData[1].occupiedBed}`
+                document.querySelector(".vaccentBeds").innerText = `Vacant Beds ${data.hospitalData[2].vacantBed}`
+                document.querySelector(".totalICUBeds").innerText = `Total ICU Beds ${data.hospitalData[3].Icubed}`
+                document.querySelector(".occupiedICUBeds").innerText = `Occupied ICU Beds ${data.hospitalData[4].occupiedICUBed}`
+                document.querySelector(".vacantICUBeds").innerText = `Vacant ICU Beds ${data.hospitalData[5].vacantICUBed}`
+                document.querySelector(".hospitalName").innerText = `Hospital Name ${data.nearbyHospital[0].hospitalName}`
+                document.querySelector(".availableBeds").innerText = `Available Beds ${data.nearbyHospital[1].availableBeds}`
+                document.querySelector(".OxygenLeftFor").innerText = `Oxygen Left For ${data.nearbyHospital[2].OxygenLeftFor}`
+                document.querySelector(".distance").innerText = `Distance ${data.nearbyHospital[3].distance} km`
+            
+            })
+    </script>
+    
+</body>
+
+</html>

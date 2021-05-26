@@ -1,0 +1,19 @@
+{
+  "name": "activity4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "all": "0.0.0",
+    "cheerio": "^1.0.0-rc.9",
+    "jspdf": "^2.3.1",
+    "pdfkit": "^0.12.1",
+    "puppeteer": "^8.0.0",
+    "request": "^2.88.2"
+  }
+}

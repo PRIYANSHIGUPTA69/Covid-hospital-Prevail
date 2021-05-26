@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+body{
+    margin: 0;
+}
+.main_container {
+    height: 5rem;
+    background-color: rgb(65, 62, 62);
+    text-align: center;
+    padding: .1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.main_container >*{
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+.hospital_bed {
+    height: 16rem;
+   border:1px solid rgb(65, 62, 62);
+    background-color: rgb(65, 62, 62);
+    
+}
+.heading{
+    text-align: center;
+    height: 2rem;
+    margin-top: 0px;
+    padding-bottom: 2rem;
+    color: white;
+
+}
+.hospital_beds{
+    height: 13rem;
+    
+    display: flex;
+    width:100%;
+    
+}
+
+.bed{
+    height: 9.3rem;
+    
+    width: 15%;
+    margin: 1.5rem;
+    margin-left:1.5rem;
+    margin-right:1.5rem;
+    padding-top: 2.5rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+.bed:hover{
+    border:3px solid black
+}
+.totalBed{
+    background-color: aquamarine;
+ }
+.occupiedBed{
+    background-color: lightpink;
+}
+.vaccentBed{
+    background-color: lightblue;
+}
+.totalICUBed{
+    background-color: rgb(166, 240, 166);
+}
+.occupiedICUBed{
+    background-color: rgb(215, 226, 236);
+}
+.vacantICUBed{
+    background-color: rgb(243, 170, 141);
+}
+.nearby_hospital{
+    margin-top: 0;
+    background-color: rgb(65, 62, 62);
+    height:calc( 100vh - ( 6rem + 15rem));
+   
+   
+}
+.heading2{
+    text-align: center;
+   padding: .05rem;
+    height: 20%;
+    color: white;
+    
+}
+.nearby_hospital_detail{
+    height: 70%;
+    display: flex;
+    
+}
+.nearby{
+    height: 80%;
+    border: 1px solid black;
+    width:23%;
+    margin: 1.5rem;
+    text-align: center;
+    padding-top: 3.5rem;
+    border-radius: 1rem;
+}
+.hospitalName{
+    background-color: rgb(245, 200, 200);
+}
+.availableBeds{
+    background-color: rgb(111, 245, 245);
+}
+.OxygenLeftFor{
+    background-color: rgb(171, 247, 222);
+}
+.distance{
+    background-color: rgb(240, 187, 167);
+}
